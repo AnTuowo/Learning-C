@@ -27,11 +27,15 @@ int main()
 }
  ```
 ## Types
-- Int
-- Char
-- Float
-- Double
-- Short/Long
+
+| Type | Definition |
+| ----------- | ----------- |
+| Int | Integer |
+| Float |  Floating point number |
+| Char | Character |
+| Short | Short integer |
+| Long | Long ineger |
+| Double | Double-precision floating point |
 ### How to use?
 ```c
 #include <stdio.h>
