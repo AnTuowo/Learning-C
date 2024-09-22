@@ -6,7 +6,7 @@ Created in 1972 by Dennis Ritchie at Bell Labs for the development of UNIX OS, C
 ## Features
 ```diff
 +   C compiles directly to machine code with minimal runtime support.
-+ It gives developers low-level control over memory and hardware.
++   It gives developers low-level control over memory and hardware.
 -   It is platform-dependent for specific OS (Mac, Linux or Windows only). 
 -   It requires manual memory management.
 ```
