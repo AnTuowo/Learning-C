@@ -137,4 +137,89 @@ Height: 1.70 meters
 gcc open.c -o open.exe
 ./open.exe
 ```
+
+## Control structures
+### Branching
+- **If-Else**
+```c
+if (<expression>) { // full then/else form
+<statement>
+}
+else {
+<statement>
+}
+```
+- **Switch (pls use with caution!)**
+```c
+<switch (<expression>) {
+    case <const-expression-1>:<statement>
+    break;
+
+    case <const-expression-2>:<statement>
+    break;
+
+    // optional
+    default: // optional
+<statement>
+}
+
+```
+- **Conditional Expression**
+```c
+//Instead of this
+//  if (x < y) {
+//      min = x;
+//  }
+//  else {
+//      min = y;
+//  }
+// Use this
+
+min = (x < y) ? x : y;
+```
+### Loop
+- For
+```c
+for (i = 0; i < 10; i++) {
+<statement>
+}
+```
+- While
+```c
+while (<expression>) {
+<statement>
+}
+```
+- Do-While
+```c
+do {
+<statement>
+} while (<expression>)
+```
+- **Break**
+```c
+while (<expression>) {
+<statement>
+<statement>
+if (<condition which can only be evaluated here>)
+break;
+<statement>
+<statement>
+}
+//Control jumps here when break triggered
+```
+
+- **Continue**
+```c
+while (<expression>) {
+...
+if (<condition>)
+continue;
+...
+...
+// control jumps here on the continue
+}
+```
+
+### Stack vs Heap
 ## Cya
