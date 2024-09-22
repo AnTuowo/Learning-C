@@ -196,7 +196,7 @@ do {
 <statement>
 } while (<expression>)
 ```
-- **Break**
+- Break (pls use with caution)
 ```c
 while (<expression>) {
 <statement>
@@ -209,7 +209,7 @@ break;
 //Control jumps here when break triggered
 ```
 
-- **Continue**
+- Continue (pls use with caution)
 ```c
 while (<expression>) {
 ...
