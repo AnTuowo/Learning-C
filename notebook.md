@@ -16,6 +16,16 @@ Created in 1972 by Dennis Ritchie at Bell Labs for the development of UNIX OS, C
  2. Create a .c file with a main function, where your program starts.
  3. Includes using library 
  4. The return value of the function indicates success (0) or failure (1).
+ ```c
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello World");
+
+    return 0;
+}
+ ```
 ## Types
 - Int
 - Char
@@ -24,6 +34,7 @@ Created in 1972 by Dennis Ritchie at Bell Labs for the development of UNIX OS, C
 - Short/Long
 ## Complex Data types
  C doesn't support OOP but allows custom data types with structures (structs). 
+ 
 ## Execute C file
 ```bash
 gcc open.c -o open.exe
