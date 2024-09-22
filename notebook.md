@@ -5,8 +5,10 @@
 Created in 1972 by Dennis Ritchie at Bell Labs for the development of UNIX OS, C is a statically typed procedural language behind many of the tools which we are taking for granted today: MySQL, interpreter for Python, Git,...
 ## Features
 ```diff
-+   C compiles directly to machine code with minimal runtime support. It gives developers low-level control over memory and hardware.
--   It is platform-dependent for specific OS (Mac, Linux or Windows only) and requires manual memory management.
++   C compiles directly to machine code with minimal runtime support.
++ It gives developers low-level control over memory and hardware.
+-   It is platform-dependent for specific OS (Mac, Linux or Windows only). 
+-   It requires manual memory management.
 ```
 ## Create C file
  To start coding in C, you need to:
