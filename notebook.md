@@ -14,7 +14,7 @@ Created in 1972 by Dennis Ritchie at Bell Labs for the development of UNIX OS, C
  To start coding in C, you need to:
  1. install a compiler like GCC. 
  2. Create a .c file with a main function, where your program starts.
- 3. Includes using library 
+ 3. Includes using libraries 
  4. The return value of the function indicates success (0) or failure (1).
  ```c
 #include <stdio.h>
@@ -32,9 +32,102 @@ int main()
 - Float
 - Double
 - Short/Long
-## Complex Data types
+### How to use?
+```c
+#include <stdio.h>
+
+int main()
+{
+    // type name = value;
+    int birthday = 1107;
+
+    // Print out the output
+    printf("Value: %i \n", birthday);
+
+    //Print out the adresse using &    
+    printf("Adresse: %p \n", &birthday);    
+
+    return 0;
+}
+```
+The output should look like this:
+```bash
+Value: 1107 
+Adresse: 0x7ffebaa83384 
+```
+### String
+There is **NO** string type. We use *char* instead which represents a one by character stored as an integer.
+
+1.  A string can be created with **an array of characters**. Each letter will have its own memory and be ended by a null character.
+```c
+#include <stdio.h>
+
+int main() {
+    char str[] = "Hey";  
+    for (int i = 0; i <= 3; i++) {
+        printf("Char: '%c'. ", str[i]);      
+        printf("Address: %p \n", &str[i]);  
+    }
+
+    return 0;
+}
+```
+Ouput:
+```bash
+Char: 'H'. Address: 0x7fff499b66c4 
+Char: 'e'. Address: 0x7fff499b66c5 
+Char: 'y'. Address: 0x7fff499b66c6 
+Char: ''. Address: 0x7fff499b66c7  
+```
+
+2. Starting with a pointer, we allocate memory space for it by using * and malloc.
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // Allocate 4 bytes of memory
+    char *str = malloc(4);
+
+    // Assign values 
+    str[0] = 'H';
+    str[1] = 'e';
+    str[2] = 'y';
+    str[3] = '\0';
+
+    // all done now so free memory to avoid memory leaks
+    free(str);
+
+    return 0;
+}
+```
+
+## Complex Data Types
  C doesn't support OOP but allows custom data types with structures (structs). 
- 
+ ```c
+ #include <stdio.h>
+
+//Create a struct
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+
+int main() {
+    struct Person goat = {"Messi", 37, 1.70};  
+    printf("Name: %s\nAge: %d\nHeight: %.2f meters\n", goat.name, goat.age, goat.height);
+    return 0;
+}
+
+ ```
+ The ouput
+ ```bash
+Name: Messi
+Age: 37
+Height: 1.70 meters
+
+ ```
 ## Execute C file
 ```bash
 gcc open.c -o open.exe
