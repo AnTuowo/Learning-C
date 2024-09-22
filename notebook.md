@@ -140,7 +140,7 @@ gcc open.c -o open.exe
 
 ## Control structures
 ### Branching
-- **If-Else**
+- If-Else
 ```c
 if (<expression>) { // full then/else form
 <statement>
@@ -149,7 +149,7 @@ else {
 <statement>
 }
 ```
-- **Switch (pls use with caution!)**
+- Switch (pls use with caution!)
 ```c
 <switch (<expression>) {
     case <const-expression-1>:<statement>
