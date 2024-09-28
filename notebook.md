@@ -1,7 +1,7 @@
 # (Not) Everything about C
 >You will die but C will live
 
-## Introduction
+## Introduction.
 Created in 1972 by Dennis Ritchie at Bell Labs for the development of UNIX OS, C is a statically typed procedural language behind many of the tools which we are taking for granted today: MySQL, interpreter for Python, Git,...
 ## Features
 ```diff
@@ -221,5 +221,96 @@ continue;
 }
 ```
 
-### Stack vs Heap
+### Array
+Index from 0 -> N-1
+```c
+int scores[100];
+scores[0] = 13; // set first element
+scores[99] = 42; // set last element
+```
+Array as a function parameter
+```c
+int get_max_1d_array(int a[], int N)
+{
+    // your code here
+}
+```
+#### Multi dimensional array
+Indexing element
+```c
+int board [10][10];
+board[0][0] = 13;
+board[9][9] = 13;
+```
+```c
+2D array as an array of array
+int board[10][10]; // --> int[10][10]
+board[0]; // --> int[10]
+board[9]; // --> int[10]
+```
+**2d-array**
+
+Axis = 1
+```
+a[0][0] 
+a[0][1]
+a[0][2]
+...
+a[0][M-1] 
+```
+**Dynamic array**
+- Resize an array
+    - realloc()
+- Global scope
+
+
+### Pointer
+- Allocate memory for pointer
+    - Indexing array pointer is the same with indexing array
+```c
+int scores[100];
+scores[0] = 13; // set first element
+scores[99] = 42; // set last element
+```
+||
+
+v
+```c
+int *p_scores;
+p_scores = malloc(100 * sizeof(int)) // allocate int[100]
+p_scores[0] = 13; // set first element
+p_scores[99] = 42; // set last element
+```
+- Declare a pointer
+```c
+int * int_pointer;
+float * float_pointer;
+char * char_pointer;
+
+void * pointer; // generic pointer
+int_pointer = NULL; // null pointer
+```
+
+- Moving pointer
+- Indexing pointer to an array
+
+### Structure data types
+```c
+struct fraction f1, f2; // declare two fractions
+f1.numerator = 22;
+f1.denominator = 7;
+f2 = f1; // this copies over the whole struct
+```
+**Pointer to structure**
+```c
+struct fraction {
+    int numerator;
+    int denominator;
+}; // Don't forget the semicolon!
+
+struct fraction *f1, *f2;
+// allocate memory for f1, f2
+
+```
+
 ## Cya
